@@ -116,7 +116,6 @@ def create_data_structure(string_input):
 # procedure below will then modify or extract information from 'network'        # 
 # ----------------------------------------------------------------------------- #
 
-
 # ----------------------------------------------------------------------------- 
 # get_connections(network, user): 
 #   Returns a list of all the connections that user has
@@ -228,8 +227,6 @@ def get_secondary_connections(network, user):
                     result.append(e)
         return result
 
-
-
 # ----------------------------------------------------------------------------- 	
 # count_common_connections(network, user_A, user_B): 
 #   Finds the number of people that user_A and user_B have in common.
@@ -242,7 +239,6 @@ def get_secondary_connections(network, user):
 # Return: 
 #   The number of connections in common (as an integer).
 #   - If user_A or user_B is not in network, return False.
-
 def count_common_connections(network, user_A, user_B):
     if user_A in network and user_B in network:
         r = 0
@@ -285,9 +281,6 @@ def count_common_connections(network, user_A, user_B):
 #   in this procedure to keep track of nodes already visited in your search. You 
 #   may safely add default parameters since all calls used in the grading script 
 #   will only include the arguments network, user_A, and user_B.
-
-
-
 def find_path_to_friend(network, user_A, user_B):
     if user_A in network and user_B in network:     # exclude strange names
         if user_B in network[user_A][0]:     # good base case
@@ -306,7 +299,6 @@ def find_path_to_friend(network, user_A, user_B):
                     return [user_A] + path_name     # if everything is fine, use recursive
     
     return None     # bad base case: every connection of user_A is scanned / user_A or user_B is not in network
-
 
 # Make-Your-Own-Procedure (MYOP)
 # ----------------------------------------------------------------------------- 
